@@ -19,4 +19,8 @@ public class PlayerData {
         return dblPercentage;
     }
 
+    public String getPosition() {
+        return strPosition;
+    }
+
 }
