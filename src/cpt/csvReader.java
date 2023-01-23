@@ -6,7 +6,7 @@ import java.io.*;
 
 
 
-public class csvReader {
+public class CSVReader {
 
     public static String[][] readCSVFile (String strfilePath) {
        
