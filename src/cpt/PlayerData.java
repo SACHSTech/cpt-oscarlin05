@@ -15,5 +15,8 @@ public class PlayerData {
         return strPlayerName;
     }
 
+    public double getPercentage() {
+        return dblPercentage;
+    }
 
 }
