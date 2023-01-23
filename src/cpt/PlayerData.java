@@ -11,5 +11,9 @@ public class PlayerData {
         this.dblPercentage = dblPercentage;
         this.strPosition = strPosition;
     }
+    public String getPlayerName() {
+        return strPlayerName;
+    }
+
 
 }
