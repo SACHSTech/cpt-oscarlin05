@@ -84,7 +84,36 @@ public class Main extends Application {
         Map<String, Double> teamPercentageMap = new HashMap<>();
         Map<String, Integer> teamCountMap = new HashMap<>();
 
-  
+        for (PlayerData d : playerDataList) {
+
+            String team = d.getTeamName();
+            double percent = d.getPercentage();
+
+            if (teamPercentageMap.containsKey(team)) {    
+                teamPercentageMap.put(team, teamPercentageMap.get(team) + percent);
+                teamCountMap.put(team, teamCountMap.get(team) + 1);
+            } 
+            else {
+                teamPercentageMap.put(team, percent);
+                teamCountMap.put(team, 1);
+            }
+        }
+
+        // Create a data series to hold the bar chart data
+        XYChart.Series<String, Number> teamData = new XYChart.Series<>();
+
+        // Add data points to the data series
+        for (Map.Entry<String, Double> entry : teamPercentageMap.entrySet()) {
+            String team = entry.getKey();
+            double totalPercent = entry.getValue();
+            int playerCount = teamCountMap.get(team);
+            teamData.getData().add(new XYChart.Data<>(team, totalPercent/playerCount));
+        }
+    
+        // Add the data series to the bar chart
+        barChart.getData().add(teamData);
+ 
+        
     }
     public static void main(String[] args) {
         launch(args);
