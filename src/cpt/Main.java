@@ -61,6 +61,30 @@ public class Main extends Application {
         // Create a data series to hold the scatter chart data
         XYChart.Series<Number, Number> data = new XYChart.Series<>();
 
+        // Add data points to the data series
+        for (PlayerData d : playerDataList) {
+            data.getData().add(new XYChart.Data<>(d.getRanking(), d.getPercentage()));
+        }
+
+        // Add the data series to the scatter chart
+        scatterChart.getData().add(data);
+
+        // Create x-axis for bar chart
+        CategoryAxis xAxisBar = new CategoryAxis();
+        xAxisBar.setLabel("Teams");
+
+        // Create y-axis for bar chart
+        NumberAxis yAxisBar = new NumberAxis();
+        yAxisBar.setLabel("Average Percentage");
+
+        // Create the bar chart
+        BarChart<String, Number> barChart = new BarChart<>(xAxisBar, yAxisBar);
+        barChart.setTitle("NBA Team Average Freethrow Percentage");
+
+        Map<String, Double> teamPercentageMap = new HashMap<>();
+        Map<String, Integer> teamCountMap = new HashMap<>();
+
+  
     }
     public static void main(String[] args) {
         launch(args);
