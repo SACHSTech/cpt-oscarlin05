@@ -130,6 +130,16 @@ public class Main extends Application {
         Tab scatterTab = new Tab("Scatter Chart");
         scatterTab.setContent(scatterChart);
 
+        // Create the second tab and add the bar chart to it
+        Tab barTab = new Tab("Bar Chart");
+        barTab.setContent(barChart);
+
+        // Add the tabs to the TabPane container
+        tabPane.getTabs().addAll(scatterTab, barTab);
+
+        // Add the TabPane container to the root layout container
+        vbox.getChildren().add(tabPane);
+        
     }
     public static void main(String[] args) {
         launch(args);
