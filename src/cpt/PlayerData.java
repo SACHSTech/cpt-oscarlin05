@@ -10,7 +10,6 @@ public class PlayerData {
     private String strPlayerName; 
     private double dblPercentage;
     private String strTeamName;
-    private String strPosition;
 
     /**
      * 
