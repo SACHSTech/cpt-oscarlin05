@@ -40,7 +40,27 @@ public class Main extends Application {
 
         // Use CSVreader to add data to a list
         List<PlayerData> playerDataList = reader.read("src/cpt/freethrow.csv");
-       
+
+        // Create an instance of the class that implements the selection sort algorithm
+        SelectionSort selectionSort = new SelectionSort();
+
+        // Create an array of integers to store the years
+        Double[] percentage = new Double[playerDataList .size()];
+
+        int k = 0;
+
+        for (PlayerData d : playerDataList ) {
+
+            percentage[k++] =  d.getPercentage();
+
+        }
+
+        // Pass the array of years to the sorting method
+        selectionSort.sort(percentage);
+
+        // Create a data series to hold the scatter chart data
+        XYChart.Series<Number, Number> data = new XYChart.Series<>();
+
     }
     public static void main(String[] args) {
         launch(args);
