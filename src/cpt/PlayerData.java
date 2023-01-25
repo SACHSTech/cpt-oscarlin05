@@ -2,17 +2,23 @@ package cpt;
 
 public class PlayerData {
 
+    private int intRanking;
     private String strPlayerName; 
     private double dblPercentage;
     private String strTeamName;
     private String strPosition;
 
-    public PlayerData(String strPlayerName, String strTeamName, double dblPercentage, String strPosition){
+    public PlayerData(int intRanking, String strPlayerName, String strTeamName, double dblPercentage){
+        this.intRanking = intRanking;
         this.strPlayerName = strPlayerName;
         this.strTeamName = strTeamName;
         this.dblPercentage = dblPercentage;
-        this.strPosition = strPosition;
     }
+
+    public int getRanking(){
+        return intRanking;
+    }
+
     public String getPlayerName() {
         return strPlayerName;
     }
@@ -24,10 +30,4 @@ public class PlayerData {
     public double getPercentage() {
         return dblPercentage;
     }
-
-    public String getPosition() {
-        return strPosition;
-    }
-
-
 }
