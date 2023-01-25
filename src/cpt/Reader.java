@@ -18,12 +18,12 @@ public class Reader{
             while ((line = br.readLine()) != null) {
 
                 String[] values = line.split(",");
+                int intRanking = Integer.parseInt(values[0]);
                 String strPlayerName = values[1];
                 String strTeamName = values[2];
                 Double dblPercentage = Double.parseDouble(values[4]);
-                //String strPosition = values[3];
 
-                data.add(new PlayerData(strPlayerName, strTeamName, dblPercentage)); 
+                data.add(new PlayerData(intRanking, strPlayerName, strTeamName, dblPercentage)); 
    
             }
         } catch (IOException e) {
