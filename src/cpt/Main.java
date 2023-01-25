@@ -112,8 +112,16 @@ public class Main extends Application {
     
         // Add the data series to the bar chart
         barChart.getData().add(teamData);
- 
-        
+    
+        // Add the scatter chart and bar chart to a VBox
+        VBox vbox = new VBox(scatterChart, barChart);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.setSpacing(10);
+        // Create a scene and set it to the stage
+        Scene scene = new Scene(vbox, 800, 600);
+        stage.setScene(scene);
+        stage.setTitle("NBA Player Free Throw Percentage");
+        stage.show();
     }
     public static void main(String[] args) {
         launch(args);
