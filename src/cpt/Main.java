@@ -122,6 +122,14 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.setTitle("NBA Player Free Throw Percentage");
         stage.show();
+
+        // Create a TabPane container
+        TabPane tabPane = new TabPane();
+
+        // Create the first tab and add the scatter chart to it
+        Tab scatterTab = new Tab("Scatter Chart");
+        scatterTab.setContent(scatterChart);
+
     }
     public static void main(String[] args) {
         launch(args);
