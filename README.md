@@ -8,6 +8,6 @@ Description: the data on my graphs represents the percentage of freethrow shots 
 
 data source site: [Source Site](https://www.teamrankings.com/nba/player-stat/free-throw-percentage)
 
-[Demo Video](not done yet)
+[Demo Video](https://drive.google.com/file/d/1BAiwpPf0FxbwBYTJZy0w0op3lheLjmCt/view?usp=sharing)
 
-[Course Connection Video](not done yet)
+[Course Connection Video](https://drive.google.com/file/d/1t49xqFJV8P62BmuiZELX9p_tTm6Hptxy/view?usp=sharing)
