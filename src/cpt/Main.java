@@ -41,7 +41,7 @@ public void start(Stage stage) {
 
     // Create the scatter chart
     ScatterChart<Number, Number> scatterChart = new ScatterChart<>(xAxis, yAxis);
-    scatterChart.setTitle("Top 100 NBA Player Freethrow Percentage by Teams");
+    scatterChart.setTitle("Top 100 NBA Player Freethrow Percentage by Teams 2023");
 
     // Create an object of CSVReader
     Reader reader = new Reader();
