@@ -86,6 +86,18 @@ public void start(Stage stage) {
     data.getData().add(new XYChart.Data<>(d.getRanking(), d.getPercentage()));
     }
 
+    for (PlayerData d : playerDataList) {
+        originalData.getData().add(new XYChart.Data<>(d.getRanking(), d.getPercentage()));
+        }
+
+    Button resetBtn = new Button("Reset Data");
+    teamCheckBoxes.add(resetBtn, 1, row + 2);
+
+    resetBtn.setOnAction(event -> {
+        scatterChart.getData().clear();
+        scatterChart.getData().addAll(originalData);
+    });
+
 
     // Add the data series to the scatter chart
     scatterChart.getData().add(data);
